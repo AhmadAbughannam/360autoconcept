@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "360 Autoconcept",
+      "image": "img/5.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "description": "Leading car care services in Dubai, specializing in peelable paint, PPF, and ceramic coating."
+    }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="360 Autoconcept - Dubai’s Leading Car Care Experts, specializing in Peelable Paint, PPF, and Premium Car Care Solutions. Get a Free Quote!">
-    <title>360 Autoconcept | Car Care Experts in Dubai</title>
+    <meta name="description" content="360 Autoconcept offers Dubai's best car care services: Peelable Paint, PPF, Ceramic Coating, and more. Get a Free Quote for premium car protection today!">
+    <title>360 Autoconcept - Car Care Experts in Dubai | Peelable Paint, PPF, Ceramic Coating Services</title>
     <link rel="icon" href="https://www.cardip.de/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
@@ -173,7 +186,7 @@
         footer {
             font-size: 0.9rem;
             margin-top: 2rem;
-            padding: 2rem 0;
+            padding: 4rem 0; /* Increase padding to make footer section longer */
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
         .footer-info {
@@ -287,14 +300,47 @@
                 menu.style.display = 'block';
             }
         }
+
+        function loadGoogleReviews() {
+            const apiKey = 'AIzaSyCkYZxxxxxxx';  // Replace with your Google Places API key
+            const placeId = 'ChIJG-a9HO9AXj4RcoRNfbzSHwk';  // Place ID derived from your Google Maps link
+            const reviewsContainer = document.getElementById('google-reviews');
+
+            fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result && data.result.reviews) {
+                        const reviews = data.result.reviews;
+                        reviews.forEach(review => {
+                            const reviewElement = document.createElement('div');
+                            reviewElement.classList.add('review');
+                            reviewElement.innerHTML = `
+                                <h4>${review.author_name}</h4>
+                                <p>Rating: ${review.rating} ⭐</p>
+                                <p>${review.text}</p>
+                            `;
+                            reviewsContainer.appendChild(reviewElement);
+                        });
+                    } else {
+                        reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+                    }
+                })
+                .catch(error => {
+                    reviewsContainer.innerHTML = '<p>Unable to load reviews at the moment.</p>';
+                    console.error('Error fetching reviews:', error);
+                });
+        }
+        window.onload = loadGoogleReviews;
     </script>
 
+
+<div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy></div>
 
 <body>
 
     <!-- Header Section -->
     <header>
-        <img src="img/5.png" alt="360 Autoconcept Logo">
+        <img src="img/5.png" alt="360 Autoconcept Logo - Car Care Experts in Dubai">
         <h1 style="font-size: 120%;">Welcome to 360 Autoconcept</h1>
         <p>Dubai’s Leading Car Care Experts</p>
     </header>
@@ -324,29 +370,29 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Car Care Services in Dubai</h2>
             <div class="service-item">
-                <img src="https://www.cardip.de/images/UAE-abu-dhabi-cardip-sprayfilm.jpg" alt="CARDIP Schulungen" width="500" height="500">
+                <a href="file:///C:/Users/fahad/OneDrive/Desktop/360_autoconcept/peelable-paint.html"><img src="https://www.cardip.de/images/UAE-abu-dhabi-cardip-sprayfilm.jpg" alt="CARDIP Schulungen" width="500" height="500"></a>
                 <h3>Cardip® - Peelable Paint</h3>
-                <p>Get a fresh new look for your car with Cardip® Peelable Paint, offering high durability and easy removability for complete customization.</p>
+                <p>Enhance the protection and style of your car with Dubai's top-rated peelable paint service.</p>
             </div>
             <div class="service-item">
-                <img loading="lazy" width="500" height="500" src="https://www.carzspa.com/wp-content/uploads/2023/12/clear-PPF-being.webp" class="attachment-full size-full wp-image-27517 lazyloaded" alt="A clear PPF being applied on a black car">
+                <a href="file:///C:/Users/fahad/OneDrive/Desktop/360_autoconcept/ppf.html"><img loading="lazy" width="500" height="500" src="https://www.carzspa.com/wp-content/uploads/2023/12/clear-PPF-being.webp" alt="Paint Protection Film (PPF) service in Dubai for your car's paint protection"></a>
                 <h3>Paint Protection Film (PPF)</h3>
                 <p>Shield your car’s paint from scratches, chips, and UV rays.</p>
             </div>
             <div class="service-item">
-                <img src="img/2.jpg" alt="Premium Detailing" width="500" height="500">
+                <a href="file:///C:/Users/fahad/OneDrive/Desktop/360_autoconcept/detailing.html"><img src="img/2.jpg" alt="Premium Car Detailing in Dubai" width="500" height="500"></a>
                 <h3>Premium Detailing</h3>
                 <p>Keep your car in showroom condition with our detailing services.</p>
             </div>
             <div class="service-item">
-                <img src="img/6.jpg" alt="Ceramic Coating" width="500" height="500">
+                <a href="file:///C:/Users/fahad/OneDrive/Desktop/360_autoconcept/ceramic-coating.html"><img src="img/6.jpg" alt="Ceramic Coating Services in Dubai" width="500" height="500"></a>
                 <h3>Ceramic Coating</h3>
                 <p>Protect your car’s surface with a high-quality ceramic layer for added durability and shine.</p>
             </div>
             <div class="service-item">
-                <img src="img/7.jpg" alt="Window Tinting" width="500" height="500">
+                <a href="file:///C:/Users/fahad/OneDrive/Desktop/360_autoconcept/window-tint.html"><img src="img/7.jpg" alt="Premium Window Tinting in Dubai" width="500" height="500"></a>
                 <h3>Window Tinting</h3>
                 <p>Enhance privacy and UV protection with our premium window tinting options.</p>
             </div>
@@ -366,7 +412,7 @@
         <div class="container">
             <h3>Get a Free Quote</h3>
             <!-- Formspree Form -->
-            
+            <form action="https://formspree.io/f/mqkggrrg" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -395,7 +441,7 @@
                         <option value="pdr">Paintless Dent Removal (PDR)</option>
                         <option value="cardip-pps">Cardip® - PPS</option>
                         <option value="rims-repair">Rims Repair</option>
-                        <option value="premium-car-wash">Premium Car Wash</option>how 
+                        <option value="premium-car-wash">Premium Car Wash</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -409,6 +455,9 @@
         </div>
     </section>
 
+    <!-- Google Reviews Section -->
+    
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/971586012233" class="whatsapp-float" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
@@ -420,7 +469,10 @@
     </a>
 
     <!-- Footer Section -->
-    <footer id="footer">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy style="margin-top: 2rem; max-width: 1000px; height: 400px; margin: 0 auto; padding: 1rem; background-color: #222; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);"></div>
+
+<footer id="footer">
         <p>&copy; 2024 360 Autoconcept - Dubai’s Premier Car Care Center</p>
         <div class="footer-info">
             <p>Contact us: +971 585 879 733 | dxb@360autoconcept.com</p>
