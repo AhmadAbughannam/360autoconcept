@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -333,10 +334,10 @@
         window.onload = loadGoogleReviews;
     </script>
 
-
-<div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy></div>
+</head>
 
 <body>
+    <div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy></div>
 
     <!-- Header Section -->
     <header>
@@ -424,3 +425,57 @@
                 <div class="form-group">
                     <label for="phone">Your Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In:</label>
+                    <select id="service" name="service">
+                        <option value="peelable-paint">Cardip® - Peelable Paint</option>
+                        <option value="ppf">Paint Protection Film (PPF)</option>
+                        <option value="detailing">Premium Detailing</option>
+                        <option value="ceramic-coating">Ceramic Coating</option>
+                        <option value="window-tinting">Window Tinting</option>
+                        <option value="interior-protection">Interior Protection</option>
+                        <option value="upholstery">Upholstery</option>
+                        <option value="carbon-fiber">Carbon Fiber</option>
+                        <option value="body-kits">Body Kits</option>
+                        <option value="smart-paint">Smart Paint</option>
+                        <option value="pdr">Paintless Dent Removal (PDR)</option>
+                        <option value="cardip-pps">Cardip® - PPS</option>
+                        <option value="rims-repair">Rims Repair</option>
+                        <option value="premium-car-wash">Premium Car Wash</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Google Reviews Section -->
+    <div id="google-reviews" class="container" style="margin-top: 2rem; text-align: center;"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971586012233" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- Instagram Floating Button -->
+    <a href="https://instagram.com/360auto.concept" class="instagram-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon_logo.png" alt="Instagram">
+    </a>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 360 Autoconcept - Dubai’s Premier Car Care Center</p>
+        <div class="footer-info">
+            <p>Contact us: +971 585 879 733 | dxb@360autoconcept.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
