@@ -187,7 +187,7 @@
         footer {
             font-size: 0.9rem;
             margin-top: 2rem;
-            padding: 4rem 0; /* Increase padding to make footer section longer */
+            padding: 4rem 0;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
         }
         .footer-info {
@@ -252,7 +252,7 @@
         .instagram-float img {
             width: 30px;
             height: 30px;
-            content: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg');
+            content: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon_logo.png');
         }
 
         /* Menu Icon Styling */
@@ -291,7 +291,45 @@
         #mobile-menu a:hover {
             color: #e0b800;
         }
-    </style>
+    .styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.styled-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.styled-form .form-input {
+  padding: 0.75rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444;
+  color: #eaeaea;
+  font-size: 1rem;
+}
+.styled-form .btn {
+  align-self: center;
+  padding: 0.8rem 2rem;
+  background-color: #FFD700;
+  color: #111;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.styled-form .btn:hover {
+  background-color: #e0b800;
+  transform: translateY(-3px);
+}
+
+</style>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('mobile-menu');
@@ -337,11 +375,9 @@
 </head>
 
 <body>
-    <div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy></div>
-
     <!-- Header Section -->
     <header>
-        <img src="img/5.png" alt="360 Autoconcept Logo - Car Care Experts in Dubai">
+        <img src="public/img/5.png" alt="360 Autoconcept Logo - Car Care Experts in Dubai">
         <h1 style="font-size: 120%;">Welcome to 360 Autoconcept</h1>
         <p>Dubai’s Leading Car Care Experts</p>
     </header>
@@ -383,17 +419,17 @@
                 <p>Shield your car’s paint from scratches, chips, and UV rays.</p>
             </div>
             <div class="service-item">
-                <a href="detailing.html"><img src="img/2.jpg" alt="Premium Car Detailing in Dubai" width="500" height="500"></a>
+                <a href="detailing.html"><img src="public/img/2.jpg" alt="Premium Car Detailing in Dubai" width="500" height="500"></a>
                 <h3>Premium Detailing</h3>
                 <p>Keep your car in showroom condition with our detailing services.</p>
             </div>
             <div class="service-item">
-                <a href="ceramic-coating.html"><img src="img/6.jpg" alt="Ceramic Coating Services in Dubai" width="500" height="500"></a>
+                <a href="ceramic-coating.html"><img src="public/img/6.jpg" alt="Ceramic Coating Services in Dubai" width="500" height="500"></a>
                 <h3>Ceramic Coating</h3>
                 <p>Protect your car’s surface with a high-quality ceramic layer for added durability and shine.</p>
             </div>
             <div class="service-item">
-                <a href="window-tint.html"><img src="img/7.jpg" alt="Premium Window Tinting in Dubai" width="500" height="500"></a>
+                <a href="window-tint.html"><img src="public/img/7.jpg" alt="Premium Window Tinting in Dubai" width="500" height="500"></a>
                 <h3>Window Tinting</h3>
                 <p>Enhance privacy and UV protection with our premium window tinting options.</p>
             </div>
@@ -404,7 +440,7 @@
     <section id="location" class="location">
         <div class="container">
             <h2>Our Location</h2>
-            <iframe src="https://maps.google.com/maps?q=360%20Auto%20Concept%20(CarDip%C2%AE)%20-%20FNC%20Compound,%20Phase%202%20-%20Plot%20597%20-%20Dubai%20Investment%20Park%20-%202%20-%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=360%20Auto%20Concept%20(CarDip®)%20-%20FNC%20Compound,%20Phase%202%20-%20Plot%20597%20-%20Dubai%20Investment%20Park%20-%202%20-%20Dubai&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -413,51 +449,48 @@
         <div class="container">
             <h3>Get a Free Quote</h3>
             <!-- Formspree Form -->
-            <form action="https://formspree.io/f/mqkggrrg" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Your Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In:</label>
-                    <select id="service" name="service">
-                        <option value="peelable-paint">Cardip® - Peelable Paint</option>
-                        <option value="ppf">Paint Protection Film (PPF)</option>
-                        <option value="detailing">Premium Detailing</option>
-                        <option value="ceramic-coating">Ceramic Coating</option>
-                        <option value="window-tinting">Window Tinting</option>
-                        <option value="interior-protection">Interior Protection</option>
-                        <option value="upholstery">Upholstery</option>
-                        <option value="carbon-fiber">Carbon Fiber</option>
-                        <option value="body-kits">Body Kits</option>
-                        <option value="smart-paint">Smart Paint</option>
-                        <option value="pdr">Paintless Dent Removal (PDR)</option>
-                        <option value="cardip-pps">Cardip® - PPS</option>
-                        <option value="rims-repair">Rims Repair</option>
-                        <option value="premium-car-wash">Premium Car Wash</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn">Send</button>
-                </div>
-            </form>
+            <form action="https://formspree.io/f/xyzyenlk" method="POST" class="styled-form">
+  <div class="form-group">
+    <label>Your Name:</label>
+    <input type="text" name="name" required class="form-input">
+  </div>
+  <div class="form-group">
+    <label>Your Email:</label>
+    <input type="email" name="email" required class="form-input">
+  </div>
+  <div class="form-group">
+    <label>Your Phone Number:</label>
+    <input type="tel" name="phone" required class="form-input">
+  </div>
+  <div class="form-group">
+    <label>Service Interested In:</label>
+    <select name="service" required class="form-input">
+      <option value="peelable-paint">Cardip® - Peelable Paint</option>
+      <option value="ppf">Paint Protection Film (PPF)</option>
+      <option value="detailing">Premium Detailing</option>
+      <option value="ceramic-coating">Ceramic Coating</option>
+      <option value="window-tinting">Window Tinting</option>
+      <option value="interior-protection">Interior Protection</option>
+      <option value="upholstery">Upholstery</option>
+      <option value="carbon-fiber">Carbon Fiber</option>
+      <option value="body-kits">Body Kits</option>
+      <option value="smart-paint">Smart Paint</option>
+      <option value="pdr">Paintless Dent Removal (PDR)</option>
+      <option value="cardip-pps">Cardip® - PPS</option>
+      <option value="rims-repair">Rims Repair</option>
+      <option value="premium-car-wash">Premium Car Wash</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Your Message:</label>
+    <textarea name="message" rows="4" required class="form-input"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn">Send</button>
+  </div>
+</form>
         </div>
     </section>
-
-    <!-- Google Reviews Section -->
-    
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/971586012233" class="whatsapp-float" target="_blank">
@@ -470,15 +503,16 @@
     </a>
 
     <!-- Footer Section -->
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy style="margin-top: 2rem; max-width: 1000px; height: 400px; margin: 0 auto; padding: 1rem; background-color: #222; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);"></div>
-
-<footer id="footer">
-        <p>&copy; 2024 360 Autoconcept - Dubai’s Premier Car Care Center</p>
+    <footer id="footer">
+        <p>&copy; 2024 360 Autoconcept - Dubai’s Premier Car Care Center. All rights reserved.</p>
         <div class="footer-info">
             <p>Contact us: +971 585 879 733 | dxb@360autoconcept.com</p>
         </div>
     </footer>
 
+    <!-- Elfsight Widget -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy style="margin-top: 2rem; max-width: 1000px; height: 400px; margin: 0 auto; padding: 1rem; background-color: #222; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);"></div>
 </body>
+
 </html>
