@@ -252,9 +252,9 @@
         .instagram-float img {
             width: 30px;
             height: 30px;
-            content: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon_logo.png');
+            content: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg');
         }
-
+        
         /* Menu Icon Styling */
         .menu-container {
             position: fixed;
@@ -291,45 +291,46 @@
         #mobile-menu a:hover {
             color: #e0b800;
         }
-    .styled-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background-color: #333;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-.styled-form .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.styled-form .form-input {
-  padding: 0.75rem;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #444;
-  color: #eaeaea;
-  font-size: 1rem;
-}
-.styled-form .btn {
-  align-self: center;
-  padding: 0.8rem 2rem;
-  background-color: #FFD700;
-  color: #111;
-  border: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.styled-form .btn:hover {
-  background-color: #e0b800;
-  transform: translateY(-3px);
-}
 
-</style>
+        .styled-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .styled-form .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .styled-form .form-input {
+            padding: 0.75rem;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #444;
+            color: #eaeaea;
+            font-size: 1rem;
+        }
+        .styled-form .btn {
+            align-self: center;
+            padding: 0.8rem 2rem;
+            background-color: #FFD700;
+            color: #111;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .styled-form .btn:hover {
+            background-color: #e0b800;
+            transform: translateY(-3px);
+        }
+
+    </style>
     <script>
         function toggleMenu() {
             var menu = document.getElementById('mobile-menu');
@@ -339,39 +340,7 @@
                 menu.style.display = 'block';
             }
         }
-
-        function loadGoogleReviews() {
-            const apiKey = 'AIzaSyCkYZxxxxxxx';  // Replace with your Google Places API key
-            const placeId = 'ChIJG-a9HO9AXj4RcoRNfbzSHwk';  // Place ID derived from your Google Maps link
-            const reviewsContainer = document.getElementById('google-reviews');
-
-            fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result && data.result.reviews) {
-                        const reviews = data.result.reviews;
-                        reviews.forEach(review => {
-                            const reviewElement = document.createElement('div');
-                            reviewElement.classList.add('review');
-                            reviewElement.innerHTML = `
-                                <h4>${review.author_name}</h4>
-                                <p>Rating: ${review.rating} ⭐</p>
-                                <p>${review.text}</p>
-                            `;
-                            reviewsContainer.appendChild(reviewElement);
-                        });
-                    } else {
-                        reviewsContainer.innerHTML = '<p>No reviews available.</p>';
-                    }
-                })
-                .catch(error => {
-                    reviewsContainer.innerHTML = '<p>Unable to load reviews at the moment.</p>';
-                    console.error('Error fetching reviews:', error);
-                });
-        }
-        window.onload = loadGoogleReviews;
     </script>
-
 </head>
 
 <body>
@@ -450,45 +419,45 @@
             <h3>Get a Free Quote</h3>
             <!-- Formspree Form -->
             <form action="https://formspree.io/f/xyzyenlk" method="POST" class="styled-form">
-  <div class="form-group">
-    <label>Your Name:</label>
-    <input type="text" name="name" required class="form-input">
-  </div>
-  <div class="form-group">
-    <label>Your Email:</label>
-    <input type="email" name="email" required class="form-input">
-  </div>
-  <div class="form-group">
-    <label>Your Phone Number:</label>
-    <input type="tel" name="phone" required class="form-input">
-  </div>
-  <div class="form-group">
-    <label>Service Interested In:</label>
-    <select name="service" required class="form-input">
-      <option value="peelable-paint">Cardip® - Peelable Paint</option>
-      <option value="ppf">Paint Protection Film (PPF)</option>
-      <option value="detailing">Premium Detailing</option>
-      <option value="ceramic-coating">Ceramic Coating</option>
-      <option value="window-tinting">Window Tinting</option>
-      <option value="interior-protection">Interior Protection</option>
-      <option value="upholstery">Upholstery</option>
-      <option value="carbon-fiber">Carbon Fiber</option>
-      <option value="body-kits">Body Kits</option>
-      <option value="smart-paint">Smart Paint</option>
-      <option value="pdr">Paintless Dent Removal (PDR)</option>
-      <option value="cardip-pps">Cardip® - PPS</option>
-      <option value="rims-repair">Rims Repair</option>
-      <option value="premium-car-wash">Premium Car Wash</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>Your Message:</label>
-    <textarea name="message" rows="4" required class="form-input"></textarea>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn">Send</button>
-  </div>
-</form>
+                <div class="form-group">
+                    <label>Your Name:</label>
+                    <input type="text" name="name" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Your Email:</label>
+                    <input type="email" name="email" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Your Phone Number:</label>
+                    <input type="tel" name="phone" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Service Interested In:</label>
+                    <select name="service" required class="form-input">
+                        <option value="peelable-paint">Cardip® - Peelable Paint</option>
+                        <option value="ppf">Paint Protection Film (PPF)</option>
+                        <option value="detailing">Premium Detailing</option>
+                        <option value="ceramic-coating">Ceramic Coating</option>
+                        <option value="window-tinting">Window Tinting</option>
+                        <option value="interior-protection">Interior Protection</option>
+                        <option value="upholstery">Upholstery</option>
+                        <option value="carbon-fiber">Carbon Fiber</option>
+                        <option value="body-kits">Body Kits</option>
+                        <option value="smart-paint">Smart Paint</option>
+                        <option value="pdr">Paintless Dent Removal (PDR)</option>
+                        <option value="cardip-pps">Cardip® - PPS</option>
+                        <option value="rims-repair">Rims Repair</option>
+                        <option value="premium-car-wash">Premium Car Wash</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Message:</label>
+                    <textarea name="message" rows="4" required class="form-input"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -499,7 +468,7 @@
 
     <!-- Instagram Floating Button -->
     <a href="https://instagram.com/360auto.concept" class="instagram-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon_logo.png" alt="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
     </a>
 
     <!-- Footer Section -->
@@ -510,9 +479,6 @@
         </div>
     </footer>
 
-    <!-- Elfsight Widget -->
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-2d3b2b31-68e0-4478-9477-300cae3f7dc2" data-elfsight-app-lazy style="margin-top: 2rem; max-width: 1000px; height: 400px; margin: 0 auto; padding: 1rem; background-color: #222; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);"></div>
 </body>
 
 </html>
