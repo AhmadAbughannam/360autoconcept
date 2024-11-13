@@ -213,6 +213,11 @@
         <p>Dubai’s Leading Car Care Experts</p>
     </header>
 
+    <!-- Get a Free Quote Button Section -->
+    <section class="container" style="text-align: center;">
+        <a href="#contact-form" class="btn enhanced-cta" style="text-decoration: none; padding: 1rem 2rem; background-color: #FFD700; color: #111; font-weight: bold; font-size: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: background-color 0.3s, transform 0.3s;">Get a Free Quote</a>
+    </section>
+
     <!-- Image Section -->
     <section class="container">
         <img src="https://www.cardip.de/images/UAE-abu-dhabi-cardip-sprayfilm.jpg" alt="Cardip® Peelable Paint" loading="lazy">
@@ -227,24 +232,24 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section class="container">
+    <section id="contact-form" class="container">
         <h3>Get a Free Quote</h3>
-        <form action="https://formspree.io/f/your_form_id" method="POST">
+        <form action="https://formspree.io/f/xyzyenlk" method="POST" class="styled-form">
             <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label>Your Name:</label>
+                <input type="text" name="name" required class="form-input">
             </div>
             <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label>Your Email:</label>
+                <input type="email" name="email" required class="form-input">
             </div>
             <div class="form-group">
-                <label for="phone">Your Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label>Your Phone Number:</label>
+                <input type="tel" name="phone" required class="form-input">
             </div>
             <div class="form-group">
-                <label for="service">Service Interested In:</label>
-                <select id="service" name="service">
+                <label>Service Interested In:</label>
+                <select name="service" required class="form-input">
                     <option value="peelable-paint">Cardip® - Peelable Paint</option>
                     <option value="cardip-pps">Cardip® - PPS</option>
                     <option value="ppf">Paint Protection Film (PPF)</option>
@@ -262,8 +267,8 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label>Your Message:</label>
+                <textarea name="message" rows="4" required class="form-input"></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn">Send</button>
@@ -288,7 +293,7 @@
     </div>
     <!-- Home Floating Button on the left -->
     <div class="home-floating-button">
-        <a href="index.html.html" title="Back to Home">
+        <a href="index.html" title="Back to Home">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home">
         </a>
     </div>
