@@ -2,22 +2,25 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YC43S71V72"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC43S71V72"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-YC43S71V72');
-</script>
+        gtag('config', 'G-YC43S71V72');
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="360 Autoconcept offers top car care services in Dubai including Paint Protection Film (PPF), Peelable Paint, Ceramic Coating, and more. Discover premium protection for your vehicle.">
-    <meta name="keywords" content="Car Care Services Dubai, PPF Dubai, Ceramic Coating Dubai, Peelable Paint Dubai, Car Protection Dubai">
+    <meta name="description"
+        content="360 Autoconcept offers top car care services in Dubai including Paint Protection Film (PPF), Peelable Paint, Ceramic Coating, and more. Discover premium protection for your vehicle.">
+    <meta name="keywords"
+        content="Car Care Services Dubai, PPF Dubai, Ceramic Coating Dubai, Peelable Paint Dubai, Car Protection Dubai">
     <title>PPF Services - 360 Autoconcept</title>
     <link rel="icon" href="https://www.cardip.de/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
     <style>
         /* Reset and basic styling */
         * {
@@ -25,6 +28,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #1a1a1a;
@@ -32,6 +36,7 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
+
         .container {
             width: 90%;
             max-width: 1200px;
@@ -42,13 +47,16 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
             transition: all 0.3s ease-in-out;
         }
-        header, footer {
+
+        header,
+        footer {
             background: #111;
             color: #eaeaea;
             padding: 1.5rem 0;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         header img {
             max-width: 160px;
             height: auto;
@@ -56,24 +64,32 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
+
         header img:hover {
             transform: scale(1.1);
         }
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             color: #FFD700;
             margin-bottom: 1.5rem;
         }
+
         p {
             margin-bottom: 1.5rem;
             font-size: 1.2rem;
         }
+
         ul {
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
         }
+
         ul li {
             margin-bottom: 0.5rem;
         }
+
         img {
             max-width: 100%;
             height: auto;
@@ -82,10 +98,14 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
             transition: transform 0.3s ease;
         }
+
         img:hover {
             transform: scale(1.05);
         }
-        .form-group input, .form-group select, .form-group textarea {
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 1rem;
             border: 1px solid #444;
@@ -95,10 +115,14 @@
             color: #eaeaea;
             transition: border-color 0.3s ease;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             border-color: #FFD700;
             outline: none;
         }
+
         .form-group button {
             width: 100%;
             padding: 1rem;
@@ -111,10 +135,12 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .form-group button:hover {
             background-color: #e0b800;
             transform: translateY(-5px);
         }
+
         /* Floating buttons */
         .floating-button {
             position: fixed;
@@ -126,6 +152,7 @@
             gap: 15px;
             z-index: 1000;
         }
+
         .floating-button a {
             color: white;
             border-radius: 50%;
@@ -139,15 +166,18 @@
             text-decoration: none;
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
         }
+
         .floating-button a:hover {
             transform: scale(1.15);
             box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.8);
         }
+
         .floating-button a img {
             width: 32px;
             height: 32px;
             margin: auto;
         }
+
         /* Home Floating Button on the left */
         .home-floating-button {
             position: fixed;
@@ -167,38 +197,54 @@
             transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
             z-index: 1000;
         }
+
         .home-floating-button:hover {
             transform: scale(1.15);
             background-color: #e03e00;
             box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.8);
         }
+
         .home-floating-button img {
             width: 32px;
             height: 32px;
             margin: auto;
         }
+
         @media only screen and (max-width: 600px) {
             .container {
                 padding: 1rem;
             }
-            h1, h2, h3 {
+
+            h1,
+            h2,
+            h3 {
                 font-size: 1.5rem;
             }
-            p, .form-group input, .form-group select, .form-group textarea {
+
+            p,
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
                 font-size: 1rem;
             }
+
             .form-group button {
                 font-size: 1rem;
                 padding: 0.8rem;
             }
+
             header img {
                 max-width: 120px;
             }
-            .floating-button a, .home-floating-button {
+
+            .floating-button a,
+            .home-floating-button {
                 width: 50px;
                 height: 50px;
             }
-            .floating-button img, .home-floating-button img {
+
+            .floating-button img,
+            .home-floating-button img {
                 width: 24px;
                 height: 24px;
             }
@@ -216,20 +262,31 @@
 
     <!-- Get a Free Quote Button Section -->
     <section class="container" style="text-align: center;">
-        <a href="#contact-form" class="btn enhanced-cta" style="text-decoration: none; padding: 1rem 2rem; background-color: #FFD700; color: #111; font-weight: bold; font-size: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: background-color 0.3s, transform 0.3s;">Get a Free Quote</a>
+        <a href="#contact-form" class="btn enhanced-cta"
+            style="text-decoration: none; padding: 1rem 2rem; background-color: #FFD700; color: #111; font-weight: bold; font-size: 1.2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: background-color 0.3s, transform 0.3s;">Get
+            a Free Quote</a>
     </section>
 
     <!-- Image Section -->
     <section class="container">
-        <img src="https://www.carzspa.com/wp-content/uploads/2023/12/clear-PPF-being.webp" alt="Paint Protection Film (PPF)" loading="lazy">
+        <img src="https://www.carzspa.com/wp-content/uploads/2023/12/clear-PPF-being.webp" alt="Paint Protection Film (PPF)"
+            loading="lazy">
     </section>
 
     <!-- PPF Services Section -->
     <section class="container">
         <h2>Paint Protection Film (PPF)</h2>
-        <p>360 Autoconcept offers top-quality Paint Protection Film (PPF) services in Dubai. PPF is a transparent film that acts as a durable shield for your vehicle's paint, protecting it against scratches, rock chips, and other environmental hazards. Our premium PPF solutions ensure that your vehicle maintains its pristine look while preventing damage from the elements.</p>
-        <p>Our PPF is virtually invisible and provides an added layer of protection that keeps your car looking brand new. It also helps maintain the vehicle's resale value by preventing unsightly blemishes and scratches. Trust 360 Autoconcept for professional installation and high-quality materials, offering the best in car paint protection.</p>
-        <p>Whether you want to protect your entire car or specific high-impact areas like the hood, fenders, mirrors, or bumper, our PPF services are customizable to meet your needs. Contact us today to find out more about how PPF can protect your car in Dubai's challenging environment.</p>
+        <p>360 Autoconcept offers top-quality Paint Protection Film (PPF) services in Dubai. PPF is a transparent film
+            that acts as a durable shield for your vehicle's paint, protecting it against scratches, rock chips, and
+            other environmental hazards. Our premium PPF solutions ensure that your vehicle maintains its pristine look
+            while preventing damage from the elements.</p>
+        <p>Our PPF is virtually invisible and provides an added layer of protection that keeps your car looking brand
+            new. It also helps maintain the vehicle's resale value by preventing unsightly blemishes and scratches. Trust
+            360 Autoconcept for professional installation and high-quality materials, offering the best in car paint
+            protection.</p>
+        <p>Whether you want to protect your entire car or specific high-impact areas like the hood, fenders, mirrors, or
+            bumper, our PPF services are customizable to meet your needs. Contact us today to find out more about how PPF
+            can protect your car in Dubai's challenging environment.</p>
     </section>
 
     <!-- Contact Form Section -->
@@ -288,13 +345,13 @@
             <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
         </a>
         <!-- Call Floating Button -->
-        <a href="tel:+971586012233" target="_blank" style="background-color: #FFD700;">
+        <a href="tel:+971581561997" target="_blank" style="background-color: #FFD700;">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Call">
         </a>
     </div>
     <!-- Home Floating Button on the left -->
     <div class="home-floating-button">
-        <a href="index.html.html" title="Back to Home">
+        <a href="index.html" title="Back to Home">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home">
         </a>
     </div>
